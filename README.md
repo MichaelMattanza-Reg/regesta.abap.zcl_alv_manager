@@ -12,7 +12,7 @@ DATA(lo_alv_manager) = NEW zcl_alv_manager(
 ```
 
 La classe creerà in automatico il fieldcatalog e asssegnerà gli handler principali in automatico.
-Nel modulo di output chiamare il metodo <i>display</i> per mostrare l'alv.
+Nel modulo di output chiamare il metodo <i>display_data</i> per mostrare l'alv.
 ```abap
 lo_alv_manager->display_data( is_layout_ft = VALUE lvc_s_layo( sel_mode = 'A' ) ).
 ```
@@ -59,7 +59,7 @@ PERFORM nome_handler IN PROGRAM (gv_program_name) IF FOUND USING ...std_paramete
 
 <i>La dicitura *_st si riferisce alla seconda tabella</i>    
 
-<i>FieldCatalog Custom</i>    
+<b>FieldCatalog Custom</b>    
 è possibile dare dei valori custom agli elementi del fieldcatalog valorizzando la tabella IT_CUSTOM_FC del costruttore ( o nel metodo <i>set_second_table</i> ) passando il valore nel seguente modo:
 
 Tabella: tty_fc_custom    
